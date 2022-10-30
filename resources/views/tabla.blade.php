@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
         <title>TABLA</title>
     </head>
 
@@ -30,6 +32,16 @@
             </div>
         </nav>
         
+        @if (session()->has('confirm'))
+            {!!"<script> Swal.fire({
+              position: 'top',
+              icon: 'success',
+              title: 'El auto se añadio exitosamente',
+              showConfirmButton: false,
+              timer: 3500
+            })</script>"!!}
+        @endif
+
         <div class="container text-center mt-2">
           <div class="col">  
             <div class = "display-6  mt-2 mb-2 text-center"> Autos Registrados </div>

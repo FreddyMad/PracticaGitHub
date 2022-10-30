@@ -16,3 +16,5 @@ use App\Http\Controllers\controllerViews;
 Route::get('/', [controllerViews::class, 'showForm'])->name('form');
 
 Route::get('tabla', [controllerViews::class, 'showTable'])->name('table');
+
+Route::post('saveCar', [controllerViews::class, 'agregarAuto'])->name('saveAuto');
