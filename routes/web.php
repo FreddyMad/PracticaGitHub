@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\controllerViews;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('formulario');
-});
+Route::get('/', [controllerViews::class, 'showForm'])->name('form');
+
+Route::get('tabla', [controllerViews::class, 'showTable'])->name('table');
